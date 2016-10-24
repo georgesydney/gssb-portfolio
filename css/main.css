@@ -3,29 +3,28 @@ Project Name: George Sydney Selwyn-Brace Portfolio
 Author: George Sydney Selwyn-Brace
 */
 
-/* COLOURS: Light Grey: #f0f0f0, Mid Grey #ccc, Dark Grey #777;*/
+/* COLOURS: Light Grey: #f0f0f0, Mid Grey #ccc, Dark Grey #777, Green #008457 */
 
 /* SMALLER SCREEN/DEFAULT */
 
 @font-face{
 	font-family: 'suisse-works';
-	src: url('works.woff2') format('woff2'), url('works.woff') format('woff');
+	src: url('../fonts/works.woff2') format('woff2'), url('works.woff') format('woff');
 }
 @font-face{
 	font-family: 'suisse-medium';
-	src: url('medium.woff2') format('woff2'), url('medium.woff') format('woff');
+	src: url('../fonts/medium.woff2') format('woff2'), url('medium.woff') format('woff');
 }
-* {
-     box-sizing: border-box;
+*{
+	box-sizing: border-box;
 }
 html{
 	font-family: 'suisse-medium', helvetica, sans-serif;
 	font-size: 16px;
-	line-height: 150%;
+	line-height: 155%;
 }
 body{
 	width: 100%;
-	padding-top: 100px;
 }
 img{
 	width:100%;
@@ -33,84 +32,150 @@ img{
 p{
 	font-family: 'suisse-works', serif;
 	font-size: 1rem;
+	font-weight: normal;
 }
-p a{
+a{
 	text-decoration: none;
 	color: inherit;
 	border-bottom: solid 1px #ccc;
 	transition: 0.3s ease;
 }
-p a:hover{
-	color: #aaa;
+a:hover{
+	color: #008457;
 }
 h1{
+	font-family: 'suisse-medium', helvetica, sans-serif;
 	font-size: 1.2rem;
-	margin-top: 60px;
+	font-weight: normal;
 }
 h2{
 	font-family: 'suisse-medium', helvetica, sans-serif;
-	font-size: 0.8rem;
+	font-size: 0.85rem;
+	line-height: 145%;
 	margin:0;
-}
-h3{
-	font-family: 'suisse-medium', helvetica, sans-serif;
-	font-size: 0.8rem;
-	margin:0;
-	color: #ccc;
-}
-.cross{
-	width: 1.4rem;
-	position: fixed;
-	right: 60px;
-	top: 40px;
-	z-index: 200;
-}
-.cross a{
-	color: #000;
-	font-size: 2.5rem;
-	font-family: 'suisse-works', serif;
-	text-decoration: none;
-	display: block;
-	transition: 0.3s linear;
-}
-.cross a:hover{
-	color: #ccc;
-	transform: rotate(45deg);
-}
-.logo{
-	width: 3.8rem;
-	position: fixed;
-	left: 40px;
-	top: 40px;
-	z-index: 200;
+	font-weight: normal;
 }
 svg{
 	width:100%;
 }
-.text-wrap{
-	max-width: 720px;
-	padding: 40px; 
+.plus{
+	width: 1.5rem;
+	position: fixed;
+	right: 40px;
+	top: 40px;
+	z-index: 200;
+	transition: 0.5s ease;
+	cursor: pointer;
+}
+.plus:hover{
+	fill: #008457;
+}
+.active{
+	transform: rotate(-45deg);
+	fill: #ccc;
+}
+.initials{
+	width: 4rem;
+	position: fixed;
+	left: 40px;
+	top: 40px;
+	z-index: 190;
+}
+.initials a:hover{
+	fill:#008457;
+}
+.initials a{
+	border: none;
+	transition: 0.5s ease;
 }
 .about-panel{
-	border-top: solid 1px #ccc;
-	background-color: #fff;
-	padding-top: 100px;
+	height: 100vh;
+	width: 100%;
+	background: #fff;
+	position: fixed;
+	top:0;
+	left:100%;
+	transition: 0.5s ease;
+	overflow-y: scroll;
+	z-index: 150;
+}
+.about-text{
+	max-width: 720px;
+	padding: 100px 40px 40px 40px; 
+}
+.visible{
+	transform: translate(-100%, 0);
+}
+header{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 190;
 }
 footer{
 	padding: 20px 40px;
 	width: 100%;
-	background-color: #f0f0f0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
 }
-.landscape-wide{
-	padding: 0 0 40px;
+.captions{
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
 }
-.landscape-narrow{
-	padding: 0 40px 40px;
+.caption-content{
+	width: 100%;
+	/*text-align: center;*/
 }
-.portrait{
-	padding: 0 80px 40px;
+.name{
+	display: none;
 }
 
+.slideshow{
+	position: relative;
+	z-index: 10;
+}
+.trigger{
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	bottom: 0;
+	z-index: 50;
+}
+.next{
+	left: 50%;
+	cursor: url(../images/cursor-next.svg) 39 12, e-resize;
+}
+.previous{
+	left: 0;
+	cursor: url(../images/cursor-previous.svg) 0 12, w-resize;
+}
+.image-canvas{
+	width: 100%;
+	height: 100vh;
+	position: relative;
+}
+.landscape{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0;
+}
+.narrow{
+	padding: 0 40px;
+}
+.portrait{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 40px;
+}
 
 
 /*LARGE SCREEN*/
@@ -119,82 +184,51 @@ footer{
 	html{
 		font-size: 18px;
 	}
-	body{
-		padding-top: 0;
+	.about-text{
+		padding: 100px 40px 20px 60px;
 	}
-	.image-canvas{
-		width: 100%;
-		height: 100vh;
-		position: relative;
+	.about-panel{
+		border-left: 1px solid #ccc;
+		width: 50%;
 	}
-	.landscape-wide{
+	.wide{
 		max-width: 720px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		padding: 0;
 	}
-	.landscape-narrow{
+	.narrow{
 		max-width: 560px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 		padding: 0;
 	}
 	.portrait{
 		max-width: 420px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
 		padding: 0;
 	}
-	.about-panel{
-		height: 100vh;
-		width: 50%;
-		position: absolute;
-		left: 50%;
-		top: 300vh;
-		border-top: none;
-		border-left: solid 1px #ccc;
-		overflow-y: scroll;
-		padding: 100px 100px 0 60px;
+	.name{
+		display: block;
+		position: fixed;
+		right: 40px;
+		bottom: 20px;
 	}
-	.text-wrap{
-		padding: 0;
-	}
-	footer{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 200;
-	background-color: transparent;
+	.caption-content{
+		text-align: left;
 	}
 }
 
-/*HELPER CLASSES*/
+/*Extra Large Screen*/
 
-
-/* CLEARFIX */
-.clearfix:before,
-.clearfix:after {
-     content: " ";
-     display: table;
+@media screen and (min-width: 1400px){
+	html{
+		font-size: 22px;
+	}
+	.wide{
+		max-width: 900px;
+	}
+	.narrow{
+		max-width:700px;
+	}
+	.portrait{
+		max-width: 550px;
+	}
 }
-.clearfix:after {
-     clear:both;
-}
-
-.is-hidden {
-     display: none;
-}
-.is-visible {
-     display: block;
-}
-
-/*ADDITIONAL STYLES*/
 
 
 
