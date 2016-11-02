@@ -41,30 +41,30 @@ html{
 body{
 	width: 100%;
 }
-img{
+img, svg{
 	width:100%;
 }
+
+a{
+	text-decoration: none;
+	color: inherit;
+	transition: 0.5s ease;
+}
+
+p a, h2 a{
+	border-bottom: solid 1px #ccc;
+}
+
 p{
 	font-family: 'suisse-works', times, serif;
 	font-size: 0.9rem;
 	font-weight: 300;
 	line-height: 145%;
 }
-a{
-	text-decoration: none;
-	color: inherit;
-	transition: 0.3s ease;
-}
-p a{
-	border-bottom: solid 1px #ccc;
-}
-a:hover{
-	color: #008457;
-}
 h1{
 	font-family: 'suisse-int', helvetica, sans-serif;
-	font-size: 1.2rem;
-	font-weight: 500;
+	font-size: 2rem;
+	font-weight: 300;
 }
 h2{
 	font-family: 'suisse-int', helvetica, sans-serif;
@@ -72,9 +72,6 @@ h2{
 	line-height: 145%;
 	margin:0;
 	font-weight: 500;
-}
-svg{
-	width:100%;
 }
 .plus{
 	width: 1.5rem;
@@ -86,9 +83,7 @@ svg{
 	transition: 0.5s ease;
 	cursor: pointer;
 }
-.plus:hover{
-	fill: #008457;
-}
+
 .active{
 	transform: rotate(-135deg);
 	fill: #ccc;
@@ -100,9 +95,6 @@ svg{
 	left: 40px;
 	top: 40px;
 	z-index: 190;
-}
-.initials a:hover{
-	fill:#008457;
 }
 .initials a{
 	border: none;
@@ -123,24 +115,19 @@ svg{
 	max-width: 800px;
 	padding: 100px 40px 40px 40px; 
 }
+
 .icon{
 	display: inline-block;
 	transition: 0.5s ease;
 	border: none;
+	margin: 1em 0.5em 0 0;
+	fill:#000;
 }
-.icon:hover{
-	fill:#008457;
+.icon svg{
+	width: 1.5rem;
 }
-.twitter{
-	width: 2.5rem;
-	height: 2.5rem;
-	transform: translate(0, 16.666%);
-}
-.instagram{
-	width: 1.6rem;
-	height: 1.6rem;
-}
-.visible-side{
+
+.about-visible{
 	transform: translate(-100%, 0);
 }
 
@@ -192,6 +179,7 @@ header{
 	top: 48%;
 	transform: translate(-50%, -50%);
 	padding: 0 40px;
+	max-width: 420px;
 }
 
 .captions{
@@ -216,10 +204,13 @@ header{
 		border-left: 1px solid #ccc;
 		width: 50%;
 	}
-	.social-icons{
+	.contact-icons{
 		position: absolute;
 		bottom: 20px;
 		right: 40px;
+	}
+	.icon{
+		margin: 0 0 0 0.4em;
 	}
 	.wide{
 		max-width: 720px;
@@ -229,7 +220,6 @@ header{
 		padding: 0;
 	}
 	.portrait{
-		max-width: 420px;
 		padding: 0;
 	}
 	.name{
@@ -241,6 +231,14 @@ header{
 	}
 	.captions{
 		bottom: 20px;
+	}
+
+	a:hover{
+	color: #008457;
+	fill:#008457;
+	}
+	.plus:hover, .icon:hover{
+	fill: #008457;
 	}
 }
 

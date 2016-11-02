@@ -4,12 +4,12 @@ $(document).ready(function(){
 
 		if ($('.plus').hasClass('active')) {
 
-		$('.about-panel').removeClass('visible-side');
+		$('.about-panel').removeClass('about-visible');
 		$('.plus').removeClass('active');
 
 		} else {
 
-			$('.about-panel').addClass('visible-side');
+			$('.about-panel').addClass('about-visible');
 			$('.plus').addClass('active');
 
 		}
