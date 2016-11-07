@@ -16,4 +16,15 @@ $(document).ready(function(){
 
 	});
 
+	// $(function(){
+	// 	$('.image').draggable();
+	// });
+
+	// $('.image').on('mousedown', function(){
+
+	// 	$(this).css("z-index", "2").siblings().css("z-index", "1");
+
+	// });
+
+
 });
