@@ -176,10 +176,10 @@ h2{
 	max-width: 420px;
 }
 
-.captions{
+#caption{
 	position: fixed;
 	bottom: 20px;
-	left: 40px;
+	padding: 0 40px;
 	width: 100%;
 	z-index: 140;
 }
@@ -226,9 +226,7 @@ h2{
 		bottom: 20px;
 		z-index: 150;
 	}
-	.captions{
-		bottom: 20px;
-	}
+}
 
 	a:hover{
 	color: #008457;

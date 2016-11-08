@@ -53,52 +53,42 @@
 			</svg>
 		</div>
 
-			<div class="slideshow cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="0" data-cycle-prev=".previous" data-cycle-next=".next" data-cycle-speed="100" data-cycle-easing="linear">
+			<div class="slideshow cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="0" data-cycle-prev=".previous" data-cycle-next=".next" data-cycle-speed="100" data-cycle-easing="linear" data-cycle-swipe="true" data-cycle-swipe-fx="scrollHorz" data-cycle-caption="#caption" data-cycle-caption-template="{{cycleTitle}}">
 
 				<span class="trigger next"></span>
 				<span class="trigger previous"></span>
 
-				<div class="image-canvas">
-					<img class="landscape wide" src="images/hyperbole.jpg" alt="Hyperbole Erodes Meaning print by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Hyperbole Erodes Meaning</i>">
+					<img class="landscape wide" src="images/hyperbole.jpg" alt="Hyperbole Erodes Meaning">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape narrow" src="images/killington-fall-poster.jpg" alt="Killington Fall gig poster designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="Poster for Killington Fall">
+					<img class="landscape narrow" src="images/killington-fall-poster.jpg" alt="Poster for Killington Fall">
 				</div>
-				<div class="image-canvas">
-					<img class="portrait" src="images/nostalgia-acceleration-1.jpg" alt="Nostalgia Acceleration t-shirt designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Nostalgia Acceleration</i>">
+					<img class="portrait" src="images/nostalgia-acceleration-1.jpg" alt="Nostalgia Acceleration">
 				</div>
-				<div class="image-canvas">
-					<img class="portrait" src="images/na-detail.jpg" alt="Nostalgia Acceleration t-shirt detail designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Nostalgia Acceleration</i> detail">
+					<img class="portrait" src="images/na-detail.jpg" alt="Nostalgia Acceleration detail">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape wide" src="images/tallowin-edition.jpg" alt="Flag Scheme screen print designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Flag Scheme</i> print for Tallowin">
+					<img class="landscape wide" src="images/tallowin-edition.jpg" alt="Flag Scheme print for Tallowin">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape narrow" src="images/tallowin-flag.jpg" alt="Tallowin Flag by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="Flag for Tallowin">
+					<img class="landscape narrow" src="images/tallowin-flag.jpg" alt="Flag for Tallowin">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape wide" src="images/curator-author-1.jpg" alt="A spread from Is a Curator an Author of a Collection, an essay written and designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Is a Curator an Author of a Collection?</i>">
+					<img class="landscape wide" src="images/curator-author-1.jpg" alt="Is a Curator an Author of a Collection?">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape narrow" src="images/the-fold.jpg" alt="Bookmark business cards for The Fold bookshop in Peckham, designed by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="Identity for The Fold">
+					<img class="landscape narrow" src="images/the-fold.jpg" alt="Identity for The Fold">
 				</div>
-				<div class="image-canvas">
-					<img class="landscape extra-wide" src="images/intimate-trajectories.jpg" alt="Intimate Trajectories photographs by George Sydney Selwyn-Brace">
+				<div class="image-canvas" data-cycle-title="<i>Intimate Trajectories</i>">
+					<img class="landscape extra-wide" src="images/intimate-trajectories.jpg" alt="Intimate Trajectories">
 				</div>
 
 			</div>
 
-			<div class="captions cycle-slideshow" data-cycle-slides="> h2" data-cycle-timeout="0" data-cycle-prev=".previous" data-cycle-next=".next" data-cycle-speed="100" data-cycle-easing="linear">
-				<h2><i>Hyperbole Erodes Meaning</i></h2>
-				<h2>Poster for Killington Fall</h2>
-				<h2><i>Nostalgia Acceleration</i></h2>
-				<h2><i>Nostalgia Acceleration</i> detail</h2>
-				<h2><i>Flag Scheme</i> print for Tallowin</h2>
-				<h2>Flag for Tallowin</h2>
-				<h2><i>Is a curator an author of a collection?</i></h2>
-				<h2>Identity for The Fold</h2>
-				<h2><i>Intimate Trajectories</i></h2>
-			</div>
+			<h2 id="caption"></h2>
 
 		<div class="about-panel">
 			<div class="about-text">
@@ -173,6 +163,7 @@
 
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery.cycle2.js"></script>
+		<script src="js/jquery.cycle2.swipe.js"></script>
 		<script src="js/main.js"></script>
 
 	</body>
