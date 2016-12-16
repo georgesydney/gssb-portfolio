@@ -100,6 +100,12 @@ h2{
 	transition: 0.3s ease;
 	fill: #000;
 }
+.name{
+	position: fixed;
+	left: 40px;
+	bottom: 20px;
+
+}
 .about-panel{
 	height: 100vh;
 	width: 100%;
@@ -129,10 +135,6 @@ h2{
 
 .about-visible{
 	transform: translate(-100%, 0);
-}
-
-.name{
-	display: none;
 }
 
 .slideshow{
@@ -176,11 +178,7 @@ h2{
 }
 
 #caption{
-	position: fixed;
-	bottom: 20px;
-	padding: 0 40px;
-	width: 100%;
-	z-index: 140;
+	display: none;
 }
 
 
@@ -218,12 +216,23 @@ h2{
 	.portrait{
 		padding: 0;
 	}
+	.name h2 {
+		transform: rotate(-90deg);
+	}
 	.name{
 		display: block;
 		position: fixed;
-		right: 40px;
+		left: 40px;
 		bottom: 20px;
 		z-index: 150;
+	}
+	#caption{
+	position: fixed;
+	text-align: right;
+	bottom: 20px;
+	right: 40px;
+	width: 100%;
+	z-index: 140;
 	}
 }
 
