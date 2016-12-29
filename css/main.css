@@ -102,8 +102,10 @@ h2{
 }
 .name{
 	position: fixed;
-	left: 40px;
-	bottom: 20px;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	padding: 20px 0 20px 40px;
 
 }
 .about-panel{
@@ -178,7 +180,8 @@ h2{
 }
 
 #caption{
-	display: none;
+	position: fixed;
+	bottom: -60px;
 }
 
 
@@ -216,17 +219,15 @@ h2{
 	.portrait{
 		padding: 0;
 	}
-	.name h2 {
-		transform: rotate(-90deg);
-	}
 	.name{
 		display: block;
 		position: fixed;
-		left: 40px;
-		bottom: 20px;
+		left: 0;
+		bottom: 0;
 		z-index: 150;
 	}
 	#caption{
+	display: block;
 	position: fixed;
 	text-align: right;
 	bottom: 20px;
