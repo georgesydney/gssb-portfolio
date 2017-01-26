@@ -3,7 +3,7 @@ Project Name: George Sydney Selwyn-Brace Portfolio
 Author: George Sydney Selwyn-Brace
 */
 
-/* COLOURS: Light Grey: #eee, Mid Grey #ccc, Dark Grey #777, Green #008457 */
+/* COLOURS: Light Grey: #eee, Mid Grey #ccc, Dark Grey #777, Green #00ed97 */
 
 /* SMALLER SCREEN/DEFAULT */
 
@@ -60,6 +60,7 @@ p{
 	font-size: 0.9rem;
 	font-weight: 300;
 	line-height: 145%;
+
 }
 h1{
 	font-family: 'suisse-int', helvetica, sans-serif;
@@ -72,6 +73,7 @@ h2{
 	line-height: 145%;
 	margin:0;
 	font-weight: 500;
+
 }
 .plus{
 	width: 1.5rem;
@@ -238,11 +240,11 @@ h2{
 }
 
 	a:hover{
-	color: #008457;
-	fill:#008457;
+	color: #00ed97;
+	fill:#00ed97;
 	}
 	.plus:hover, .icon:hover{
-	fill: #008457;
+	fill: #00ed97;
 	}
 }
 
