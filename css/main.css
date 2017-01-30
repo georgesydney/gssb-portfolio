@@ -56,7 +56,8 @@ a{
 }
 
 p a{
-	border-bottom: solid 1px #ee6754;
+	border-bottom: solid 1px #777;
+	/*ee6754*/
 }
 
 p{
@@ -129,7 +130,6 @@ h2{
 	transition: 0.5s ease;
 	border: none;
 	margin: 1em 0.25em 0 0;
-	fill:#000;
 }
 .icon svg{
 	width: 1.1rem;
@@ -242,7 +242,7 @@ h2{
 		padding: 100px 60px 20px 40px;
 	}
 	.about-panel{
-		border-left: 1px solid #ccc;
+		border-left: 1px solid #777;
 		width: 50%;
 	}
 	.contact-icons{
@@ -261,7 +261,7 @@ h2{
 }
 
 	p a:hover{
-	color: #ccc;
+	color: #777;
 	}
 	.plus:hover, .icon:hover{
 	fill: #777;
