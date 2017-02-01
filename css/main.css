@@ -54,7 +54,7 @@ a{
 	transition: 0.3s ease;
 }
 
-p,h2 a{
+p a{
 	border-bottom: solid 1px #ccc;
 	/*ee6754*/
 }
