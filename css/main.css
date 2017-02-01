@@ -39,7 +39,6 @@ html{
 	font-size: 16px;
 	color: #1a1a1a;
 	fill: #1a1a1a;
-	/*background-color: #e6e6e6;*/
 }
 body{
 	width: 100%;
@@ -55,7 +54,7 @@ a{
 	transition: 0.3s ease;
 }
 
-p a{
+p,h2 a{
 	border-bottom: solid 1px #ccc;
 	/*ee6754*/
 }
@@ -231,6 +230,13 @@ h2{
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+#asp-site{
+	background-image: url(../images/asp-site-03.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 
 /*LARGE SCREEN*/
 
@@ -242,7 +248,7 @@ h2{
 		padding: 100px 60px 20px 40px;
 	}
 	.about-panel{
-		border-left: 1px solid #ccc;
+		/*border-left: 1px solid #ccc;*/
 		width: 50%;
 	}
 	.contact-icons{
