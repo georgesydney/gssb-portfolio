@@ -3,7 +3,7 @@ Project Name: George Sydney Selwyn-Brace Portfolio
 Author: George Sydney Selwyn-Brace
 */
 
-/* COLOURS: Black #1a1a1a, Mid Grey #ccc, Dark Grey #777, Green #666 */
+
 
 /* SMALLER SCREEN/DEFAULT */
 
@@ -36,14 +36,12 @@ Author: George Sydney Selwyn-Brace
 }
 html{
 	font-family: 'suisse-works', 'Helvetica Neue', Helvetica, sans-serif;
-	font-size: 16px;
-	color: #1a1a1a;
-	fill: #1a1a1a;
+	font-size: 15px;
+	color: #333333;
+	fill: #333333;
+	background-color: #fff;
 }
-body{
-	width: 100%;
-	margin-top: 100px;
-}
+
 img, svg{
 	width:100%;
 }
@@ -52,11 +50,6 @@ a{
 	text-decoration: none;
 	color: inherit;
 	transition: 0.3s ease;
-}
-
-p a{
-	border-bottom: solid 1px #ccc;
-	/*ee6754*/
 }
 
 p{
@@ -75,166 +68,37 @@ h1{
 }
 h2{
 	font-family: 'suisse-int', helvetica, sans-serif;
-	font-size: 0.8rem;
+	font-size: 1rem;
 	line-height: 145%;
 	margin:0;
 	font-weight: 500;
+	letter-spacing: 0.025em;
 
 }
-.plus{
-	width: 1.5rem;
-	height: 1.5rem;
+
+.site-wrap{
+	/*max-width: 1400px;*/
+	margin: 2rem 4rem 2rem 2rem;
+}
+.name{
+	bottom: 4rem;
+	right: 1.5rem;
+	width: 1rem;
 	position: fixed;
-	right: 40px;
-	top: 40px;
-	z-index: 200;
-	transition: 0.4s ease;
-	cursor: pointer;
 }
 
-.active{
-	transform: rotate(-135deg);
-	fill: #ccc;
-}
-
-.initials{
-	width: 4rem;
-	position: fixed;
-	left: 40px;
-	top: 40px;
-	z-index: 190;
-}
-.initials a{
-	transition: 0.3s ease;
-	fill: #000;
-}
-.about-panel{
-	height: 100vh;
-	width: 100%;
-	background: #fff;
-	position: fixed;
-	top:0;
-	left:100%;
-	transition: 0.4s ease;
-	overflow-y: scroll;
-	z-index: 160;
-}
-.about-text{
-	max-width: 800px;
-	padding: 140px 40px 40px 40px; 
-}
-
-.icon{
+.list-symbol{
+	width: 1.6rem;
 	display: inline-block;
-	transition: 0.5s ease;
-	border: none;
-	margin: 1em 0.25em 0 0;
+	float: left;
 }
-.icon svg{
-	width: 1.1rem;
-}
-
-.about-visible{
-	transform: translate(-100%, 0);
+.list-item{
+	width: calc(100% - 1.6rem);
+	float: left;
 }
 
-.slideshow{
-	position: relative;
-	z-index: 10;
-}
-.trigger{
-	position: absolute;
-	width: 50%;
-	height: 100%;
-	bottom: 0;
-	z-index: 150;
-}
-.next{
-	left: 50%;
-	cursor: url(../images/cursor-next.svg) 39 12, e-resize;
-}
-.previous{
-	left: 0;
-	cursor: url(../images/cursor-previous.svg) 0 12, w-resize;
-}
-.image-canvas{
-	width: 100%;
-	height: calc(100vh - 200px);
-	position: relative;
-}
-.image-canvas-padded{
-	width: calc(100% - 80px);
-	height: calc(100vh - 280px);
-	position: relative;
-	margin: 40px;
-}
-
-#caption{
-	display: block;
-	position: fixed;
-	text-align: left;
-	bottom: 20px;
-	left: 0;
-	width: 100%;
-	padding: 0 40px;
-	z-index: 140;
-	}
-
-/*CSS Images*/
-
-#hyperbole{
-	background-image: url(../images/hyperbole.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#killington-fall{
-	background-image: url(../images/killington-fall-poster.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#nostalgia-acceleration{
-	background-image: url(../images/nostalgia-acceleration.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#na-detail{
-	background-image: url(../images/na-detail.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#flag{
-	background-image: url(../images/tallowin-flag.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#tallowin-edition{
-	background-image: url(../images/tallowin-edition.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#curator-author{
-	background-image: url(../images/curator-author.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#the-fold{
-	background-image: url(../images/the-fold.jpg);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-#asp-site{
-	background-image: url(../images/asp-site-03.png);
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
+footer{
+	margin-top: 2rem;
 }
 
 
@@ -242,36 +106,32 @@ h2{
 
 @media screen and (min-width: 720px){
 	html{
-		font-size: 19px;
-	}
-	.about-text{
-		padding: 100px 60px 20px 40px;
-	}
-	.about-panel{
-		/*border-left: 1px solid #ccc;*/
-		width: 50%;
-	}
-	.contact-icons{
-		position: absolute;
-		bottom: 20px;
-		right: 40px;
-	}
-	.icon{
-		margin: 0 0 0 0.25em;
+		font-size: 18px;
 	}
 	.name{
-		position: absolute;
-		left: 40px;
-		bottom: 20px;
+		bottom: 2rem;
+	}
+	footer{
+		position: fixed;
+		bottom: 2rem;
+		left: 33.333vw;
+		width: 66.66vw;
+	}
+
+	a:hover{
+	color: #999;
 	}
 }
 
-	p a:hover{
-	color: #777;
+/* EXTRA LARGE SCREEN*/
+
+@media screen and (min-width: 1600px){
+
+	html{
+
+		font-size: 20px;
 	}
-	.plus:hover, .icon:hover{
-	fill: #777;
-	}
+
 }
 
 /* Clearfix */
@@ -285,12 +145,6 @@ h2{
      clear:both;
 }
 
-.is-hidden {
-     display: none;
-}
-.is-visible {
-     display: block;
-}
 
 
 
