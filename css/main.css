@@ -80,11 +80,17 @@ h2{
 	/*max-width: 1400px;*/
 	margin: 2rem 4rem 2rem 2rem;
 }
+
 .name{
-	bottom: 2rem;
-	right: 1.5rem;
-	width: 1rem;
+	transform: rotate(-90deg);
+	transform-origin: top left;
+}
+.name-wrap{
+	/*border: 1px solid red;*/
 	position: fixed;
+	bottom: 0.75rem;
+	right: 0;
+	transform: translate(calc(100% - 3.5rem));
 }
 
 .list-symbol{
