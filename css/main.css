@@ -43,47 +43,38 @@ html{
 	fill: #333333;
 	background-color: #fff;
 }
-
-img, svg{
+img{
 	width:100%;
+	display: block;
 }
-
 a{
 	text-decoration: none;
 	color: inherit;
-	transition: 0.3s ease;
 }
-
 p{
 	font-family: 'suisse-int', Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: 13px;
 	font-weight: 400;
-	line-height: 145%;
+	line-height: 165%;
 	letter-spacing: 0.025em;
-
 }
-
-
 h1{
-	font-family: 'suisse-int', helvetica, sans-serif;
+	font-family: 'suisse-int', Helvetica, sans-serif;
 	font-size: 30px;
 	font-weight: 400;
 }
 h2{
-	font-family: 'suisse-int', helvetica, sans-serif;
-	font-size: 15px;
+	font-family: 'suisse-int', Helvetica, sans-serif;
+	font-size: 13px;
 	line-height: 145%;
 	margin:0;
 	font-weight: 500;
 	letter-spacing: 0.025em;
-
 }
 
 .trunk{
-	margin: 0 75px 50px 0;
-	/*background: blue;*/
+	margin: 25px 75px 50px 0;
 }
-
 .name{
 	top: 50%;
 	left: 50px;
@@ -100,38 +91,30 @@ h2{
 	transform: rotate(-90deg);
 	transform-origin: top left;
 	z-index: 150;
-	/*background: red;*/
 }
-
 .list-symbol{
-	width: 1.6rem;
+	width: 50px;
 	display: inline-block;
 	float: left;
 }
 .list-item{
-	width: calc(100% - 1.6rem);
+	width: calc(100% - 50px);
 	float: left;
-}
-.section-breaker{
-	width: 100%;
-	padding: 25px 0;
-	margin: 50px 0 0 0;
-	border-top: 1px solid #333;
 }
 .image{
 	display: inline-block;
 	vertical-align: bottom;
-	margin: 50px 0 0 50px;
+	margin: 25px 0 0 50px;
 	position: relative;
 }
 .s{
-	max-width: 300px;
+	max-width: 250px;
 }
 .m{
-	max-width: 475px;
+	max-width: 375px;
 }
 .l{
-	max-width: 950px;
+	max-width: 615px;
 }
 .hero{
 	width: calc(100% + 50px);
@@ -141,9 +124,11 @@ h2{
 	position: fixed;
 	background: rgba(255,255,255,0.9);
 	z-index: 100;
-	padding: 50px 75px 75px 50px;
+	padding: 50px 75px 50px 50px;
 	width: 100vw;
 	height: 100vh;
+	top: 0;
+	left: 0;
 }
 .lightbox-image{
 	width: 100%;
@@ -152,48 +137,91 @@ h2{
 	background-repeat: no-repeat;
 	background-position: top left;
 }
-.lightbox-caption{
-	position: absolute;
-	bottom: 25px;
-	left: 50px;
+.hidden{
+	display: none;
 }
-.lightbox-caption p{
-	margin: 0;
+.active{
+	display: block;
 }
 .plus{
-	display: block;
-	width: 100%;
-	height: 100%;
+	width: 25px;
+	height: 25px;
 	position: absolute;
-	top: 0;
-	right: 0;
-	margin: 0;
-	font-size: 40px;
-	color: #fff;
-	/*background-color: rgba(0,0,0,0.5);*/
-	padding: 0 20px;
+	top: 25px;
+	left: 25px;
 	opacity: 0;
 	transition: 0.2s;
-
 }
-.plus:hover{
-	opacity: 1;
+.caption{
+	opacity: 0.3;
+	transition: 0.2s;
+	padding: 25px 0 0 0;
+}
+.caption p{
+	display: inline-block;
+	min-height: 42px;
+	margin: 0;
+}
+.location-pin{
+	display: inline-block;
+	height: 13px;
+	margin-right: 5px;
+	transform: translateY(5px);
+	vertical-align: top;
+}
+.plus-horz{
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background-color: #fff;
+	transform: translateY(-50%);
+}
+.plus-vert{
+	width: 2px;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	background-color: #fff;
+	transform: translateX(-50%);
+}
+.close{
+	width: 25px;
+	height: 25px;
+	position: fixed;
+	top: 47px;
+	right: 25px;
+	transition: 0.2s;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+.close-horz{
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	background-color: #333;
+	transform: translateY(-50%);
+}
+.close-vert{
+	width: 2px;
+	height: 100%;
+	position: absolute;
+	left: 50%;
+	background-color: #333;
+	transform: translateX(-50%);
 }
 
 footer{
 	margin: 50px;
 }
 
-/*SIMPLE LAYOUT*/
-
-@media screen and (max-width: 720px){
-
-	.image{
-		margin: 50px 0 0 50px;
-		/*width: 100%;*/
+@media (hover: hover) {
+	.image:hover .plus{
+	opacity: 1;
 	}
-	.trunk{
-	margin: 0 75px 75px 0;
+	.image:hover .caption{
+		opacity: 1;
 	}
 }
 
