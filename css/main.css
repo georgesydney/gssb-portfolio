@@ -72,7 +72,7 @@ h2{
 	letter-spacing: 0.025em;
 }
 
-.trunk{
+body{
 	margin: 25px 75px 25px 0;
 }
 .name{
@@ -121,9 +121,12 @@ footer p{
 .title{
 	margin: 50px 0 0 50px;
 }
+.title h1{
+	display: inline-block;
+	margin: 0 10px 0 0;
+}
 .info-summary{
 	opacity: 0.4;
-	/*margin-left: 10px;*/
 	font-size: 13px;
 	display: inline-block;
 }
@@ -262,7 +265,7 @@ footer p{
 		bottom: -60px;
 		left: calc(100% - 60px);
 	}
-	.trunk{
+	body{
 	margin: 20px 60px 60px 0;
 	}
 
