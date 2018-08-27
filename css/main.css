@@ -60,7 +60,7 @@ p{
 }
 h1{
 	font-family: 'suisse-int', Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 18px;
 	font-weight: 400;
 }
 h2{
@@ -73,7 +73,7 @@ h2{
 }
 
 .trunk{
-	margin: 25px 75px 50px 0;
+	margin: 25px 75px 25px 0;
 }
 .name{
 	top: 50%;
@@ -92,6 +92,22 @@ h2{
 	transform-origin: top left;
 	z-index: 150;
 }
+footer{
+	margin: 0 100px 50px 50px;
+	opacity: 0.3;
+}
+footer p{
+	display: inline-block;
+	margin: 0 25px 0 0;
+}
+.camera-icon{
+	margin-right: 5px;
+	height: 12px;
+}
+.email-icon{
+	margin-right: 5px;
+	height: 10px;
+}
 .list-symbol{
 	width: 50px;
 	display: inline-block;
@@ -100,6 +116,18 @@ h2{
 .list-item{
 	width: calc(100% - 50px);
 	float: left;
+}
+.title{
+	margin: 50px 0 0 50px;
+}
+.info-summary{
+	opacity: 0.3;
+	/*margin-left: 10px;*/
+	font-size: 13px;
+	display: inline-block;
+}
+.icon{
+	height: 14px;
 }
 .image{
 	display: inline-block;
@@ -145,16 +173,17 @@ h2{
 	display: block;
 }
 .plus{
-	width: 25px;
-	height: 25px;
+	display: none;
+	width: 20px;
+	height: 20px;
 	position: absolute;
-	top: 25px;
-	left: 25px;
+	top: 20px;
+	left: 20px;
 	opacity: 0;
 	transition: 0.2s;
 }
 .caption{
-	opacity: 0.3;
+	opacity: 1;
 	transition: 0.2s;
 	padding: 25px 0 0 0;
 	display: flex;
@@ -217,13 +246,15 @@ h2{
 	background-color: #333;
 	transform: translateX(-50%);
 }
-
-footer{
-	margin: 50px;
-}
 @media screen and (max-width: 720px){
+	footer{
+	margin: 40px;
+	}
 	.image{
 		margin: 20px 0 0 40px;
+	}
+	.title{
+		margin: 40px 0 0 40px;
 	}
 	.name-wrap{
 		height: 60px;
@@ -233,10 +264,14 @@ footer{
 	.trunk{
 	margin: 20px 60px 60px 0;
 	}
+
 }
 @media (hover: hover) {
+	.caption{
+		opacity: 0;
+	}
 	.image:hover .plus{
-	opacity: 1;
+		opacity: 1;
 	}
 	.image:hover .caption{
 		opacity: 1;
