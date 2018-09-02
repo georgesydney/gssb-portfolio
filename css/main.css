@@ -1,5 +1,5 @@
 /* 
-Project Name: George Sydney Selwyn-Brace Portfolio
+Project Name: GSSB Portfolio
 Author: George Sydney Selwyn-Brace
 */
 
@@ -66,7 +66,6 @@ body{
 	margin: 0;
 }
 .name-wrap{
-	
 	position: fixed;
 	height: 75px;
 	bottom: -75px;
@@ -192,7 +191,7 @@ footer .email-icon{
 
 @media screen and (max-width: 720px){
 	footer{
-	margin: 40px;
+		margin: 40px;
 	}
 	.image{
 		margin: 20px 0 0 40px;
@@ -204,11 +203,11 @@ footer .email-icon{
 		display: none;
 	}
 	body{
-	margin: 25px 25px 60px 0;
+		margin: 25px 25px 60px 0;
 	}
 	.intro{
-	margin: 25px 0 0 25px;
-	max-width: 700px;
+		margin: 25px 0 0 25px;
+		max-width: 700px;
 	}
 	.intro h1{
 		font-size: 18px;
