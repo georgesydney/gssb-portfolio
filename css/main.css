@@ -6,7 +6,7 @@ Author: George Sydney Selwyn-Brace
 
 @font-face{
 	font-family: 'suisse-int';
-	src: url('../fonts/regular.woff2') format('woff2'), url('regular.woff') format('woff');
+	src: url('../fonts/int-regular.woff2') format('woff2'), url('int-regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -17,7 +17,7 @@ html{
 	font-family: 'suisse-int', 'Helvetica Neue', Helvetica, sans-serif;
 	color: #333333;
 	fill: #333333;
-	background-color: #fff;
+	/*background-color: #f3f1ed;*/
 	transition: 0.2s;
 }
 img{
@@ -53,16 +53,17 @@ h2{
 	letter-spacing: 0.025em;
 }
 body{
-	margin: 25px 75px 25px 0;
+	margin: 25px 75px 0 0;
 }
 .name{
-	top: 50%;
-	left: 50px;
-	transform: translateY(-50%);
-	position: relative;
-	margin: 0;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 0 50px 25px 50px;
+	z-index: 1;
 }
 .name p{
+	display: block;
 	margin: 0;
 }
 .name-wrap{
@@ -76,20 +77,14 @@ body{
 	z-index: 150;
 }
 footer{
-	margin: 0 100px 50px 50px;
+	margin: 50px 100px 50px 50px;
 }
 footer p{
 	display: inline-block;
 	margin: 0 25px 0 0;
-	opacity: 0.4;
 }
-footer .camera-icon{
-	margin-right: 5px;
-	height: 12px;
-}
-footer .email-icon{
-	margin-right: 5px;
-	height: 10px;
+footer a{
+	border-bottom: 1px dotted #333;
 }
 
 .intro{
@@ -109,8 +104,19 @@ footer .email-icon{
 	position: relative;
 	transition: 0.5s;
 }
+.hero{
+	position: relative;
+	width: calc(100vw - 75px);
+	height: 100vh;
+	background-size: cover;
+	background-position: right;
+	margin-top: -25px;
+	margin-bottom: 25px;
+	/*z-index: 200;*/
+	mix-blend-mode: multiply;
+}
 .s{
-	max-width: 250px;
+	max-width: 270px;
 }
 .m{
 	max-width: 375px;
@@ -118,22 +124,24 @@ footer .email-icon{
 .l{
 	max-width: 615px;
 }
-.lightbox-wrap{
+#lightbox-wrap{
 	position: fixed;
 	background: rgba(255,255,255,0.9);
 	z-index: 100;
-	padding: 50px 75px 50px 50px;
+	padding: 50px 75px 50px 75px;
 	width: 100vw;
 	height: 100vh;
 	top: 0;
 	left: 0;
+	display: none;
+	cursor: url(../images/close.svg), zoom-out;
 }
-.lightbox-image{
+#lightbox-image{
 	width: 100%;
 	height: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: top left;
+	background-position: center;
 }
 .hidden{
 	display: none;
@@ -143,6 +151,7 @@ footer .email-icon{
 }
 .caption{
 	opacity: 1;
+	transition: 0.3s;
 	padding: 25px 0 0 0;
 	display: flex;
 	flex-direction: row;
@@ -150,7 +159,8 @@ footer .email-icon{
 }
 .caption p{
 	display: inline-block;
-	height: 42px;
+	font-size: 13px;
+	min-height: 42px;
 	margin: 0;
 	width: calc(100% - 20px);
 }
@@ -166,7 +176,7 @@ footer .email-icon{
 	width: 25px;
 	height: 25px;
 	position: fixed;
-	top: 47px;
+	top: 25px;
 	right: 25px;
 	transform: rotate(45deg);
 	transform-origin: center;
@@ -187,23 +197,37 @@ footer .email-icon{
 	background-color: #333;
 	transform: translateX(-50%);
 }
-
+.cali-type{
+	width: 100%;
+	max-width: calc(100vh - 100px);
+	padding-right: 125px;
+	position: absolute;
+	z-index: 250;
+	top: 50%;
+	left: 50px;
+	fill: #fff;
+	transform: translateY(-50%);
+	transform: translateX(-5px);
+}
+.cali-type p{
+	color: #fff;
+	margin-top: 20px;
+	letter-spacing: 0.1em;
+	font-weight: lighter;
+}
 
 @media screen and (max-width: 720px){
 	footer{
-		margin: 40px;
+		margin: 25px;
 	}
 	.image{
-		margin: 20px 0 0 40px;
-	}
-	.intro{
-		margin: 40px 0 0 40px;
+		margin: 0 0 25px 25px;
 	}
 	header{
 		display: none;
 	}
 	body{
-		margin: 25px 25px 60px 0;
+		margin: 25px 25px 25px 0;
 	}
 	.intro{
 		margin: 25px 0 0 25px;
@@ -212,6 +236,10 @@ footer .email-icon{
 	.intro h1{
 		font-size: 18px;
 	}
+	#lightbox-wrap{
+		padding: 0;
+	}
+
 }
 @media (hover: hover) {
 	.caption{
@@ -223,11 +251,14 @@ footer .email-icon{
 	.image:hover .caption{
 		opacity: 1;
 	}
-	footer p:hover{
-		opacity: 1;
+	footer a:hover{
+		border-bottom: solid 1px #333;
 	}
 	.intro a:hover{
 		border-bottom: solid 1px;
+	}
+	#lightbox-wrap{
+		cursor: url(../images/close.svg), zoom-out;
 	}
 }
 
