@@ -1,5 +1,5 @@
 /* 
-Project Name: GSSB Portfolio
+Project Name: GSS-B Portfolio
 Author: George Sydney Selwyn-Brace
 */
 
@@ -28,253 +28,92 @@ Author: George Sydney Selwyn-Brace
 }
 html{
 	font-family: 'suisse-int', 'Helvetica Neue', Helvetica, sans-serif;
-	color: #333333;
-	fill: #333333;
-	/*background-color: #f3f1ed;*/
+	background-color: #fefefe;
 	transition: 0.2s;
+}
+main{
+	margin: 15px 20px;
 }
 img{
 	width:100%;
 	display: block;
+}
+svg{
+	width: 100%;
 }
 a{
 	text-decoration: none;
 	color: inherit;
 }
 p{
-	font-family: 'suisse-int', Helvetica, sans-serif;
-	font-size: 15px;
-	line-height: 165%;
-	letter-spacing: 0.025em;
-}
-h1{
 	font-family: 'sabon-regular', Helvetica, sans-serif;
-	font-size: 28px;
-	font-weight: 400;
-	line-height: 155%;
-	/*letter-spacing: 0.01em;*/
-}
-h1 a{
-	border-bottom: dotted 1px #333;
-	/*font-style: italic;*/
-	padding-bottom: 0.1em;
-}
-h2{
-	font-family: 'suisse-int', Helvetica, sans-serif;
-	font-size: 15px;
-	font-weight: 400;
-	line-height: 145%;
-	margin:0;
-	letter-spacing: 0.025em;
-}
-body{
-	margin: 25px 75px 0 0;
-}
-.name{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 0 50px 25px 50px;
-	z-index: 1;
-}
-.name p{
-	display: block;
+	font-size: 19px;
+	line-height: 115%;
+	letter-spacing: 0.005em;
 	margin: 0;
 }
-.name-wrap{
+p a,b{
+	font-family: 'suisse-int', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 15px;
+	letter-spacing: 0.04em;
+}
+#info{
+	z-index: 30;
+	position: absolute;
+}
+#links{
+	z-index: 20;
+}
+#images{
+	z-index: 10;
+}
+
+.random{
 	position: fixed;
-	height: 75px;
-	bottom: -75px;
-	left: calc(100% - 75px);
+	cursor: grab;
+}
+.s{
+	max-width: 200px;
+}
+.m{
+	max-width: 300px;
+}
+.l{
+	max-width: 400px;
+}
+#benchmark-logo{
+	width: 200px;
+	fill: #333333;
+}
+
+#links{
+	position: fixed;
+	height: 50px;
+	bottom: -50px;
+	left: calc(100% - 50px);
 	width: 100vh;
 	transform: rotate(-90deg);
 	transform-origin: top left;
-	z-index: 150;
 }
-footer{
-	margin: 50px 100px 50px 50px;
-}
-footer p{
-	display: inline-block;
-	margin: 0 25px 0 0;
-}
-footer a{
-	border-bottom: 1px dotted #333;
+#links p{
+	position: absolute;
+	bottom: 15px;
+	margin-left: 20px;
 }
 
-.intro{
-	margin: 50px 0 0 50px;
-	max-width: 700px;
-}
-.intro h1{
-	margin: 0 0 20px 0;
-}
-.icon{
-	height: 14px;
-}
-.image{
-	display: inline-block;
-	vertical-align: bottom;
-	margin: 25px 0 0 50px;
-	position: relative;
-	transition: 0.5s;
-}
-.hero{
-	position: relative;
-	width: calc(100vw - 75px);
-	height: 100vh;
-	background-size: cover;
-	background-position: right;
-	margin-top: -25px;
-	margin-bottom: 25px;
-	/*z-index: 200;*/
-	mix-blend-mode: multiply;
-}
-.s{
-	max-width: 270px;
-}
-.m{
-	max-width: 375px;
-}
-.l{
-	max-width: 615px;
-}
-#lightbox-wrap{
-	position: fixed;
-	background: rgba(255,255,255,0.9);
-	z-index: 100;
-	padding: 50px 75px 50px 75px;
-	width: 100vw;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	display: none;
-	cursor: url(../images/close.svg), zoom-out;
-}
-#lightbox-image{
-	width: 100%;
-	height: 100%;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-.hidden{
-	display: none;
-}
-.active{
-	display: block;
-}
-.caption{
-	opacity: 1;
-	transition: 0.3s;
-	padding: 25px 0 0 0;
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-}
-.caption p{
-	display: inline-block;
-	font-size: 13px;
-	min-height: 42px;
-	margin: 0;
-	width: calc(100% - 20px);
-}
-.location-pin{
-	display: inline-block;
-	/*height: 14px;*/
-	width: 10px;
-	margin-right: 10px;
-	transform: translateY(4px);
-	vertical-align: top;
-}
-.close{
-	width: 25px;
-	height: 25px;
-	position: fixed;
-	top: 25px;
-	right: 25px;
-	transform: rotate(45deg);
-	transform-origin: center;
-}
-.close-horz{
-	width: 100%;
-	height: 2px;
-	position: absolute;
-	top: 50%;
-	background-color: #333;
-	transform: translateY(-50%);
-}
-.close-vert{
-	width: 2px;
-	height: 100%;
-	position: absolute;
-	left: 50%;
-	background-color: #333;
-	transform: translateX(-50%);
-}
-.cali-type{
-	width: 100%;
-	max-width: calc(100vh - 100px);
-	padding-right: 125px;
-	position: absolute;
-	z-index: 250;
-	top: 50%;
-	left: 50px;
-	fill: #fff;
-	transform: translateY(-50%);
-	transform: translateX(-5px);
-}
-.cali-type p{
-	color: #fff;
-	margin-top: 20px;
-	letter-spacing: 0.1em;
-	font-weight: lighter;
-}
+
 
 @media screen and (max-width: 720px){
-	footer{
-		margin: 25px;
-	}
-	.image{
-		margin: 0 0 25px 25px;
-	}
-	header{
-		display: none;
-	}
-	body{
-		margin: 25px 25px 25px 0;
-	}
-	.intro{
-		margin: 25px 0 0 25px;
-		max-width: 700px;
-	}
-	.intro h1{
-		font-size: 18px;
-	}
-	#lightbox-wrap{
-		padding: 0;
-	}
+
 
 }
 @media (hover: hover) {
-	.caption{
-		opacity: 0;
+	a:hover{
+		color: #0000ff;
+		transition: 0.3s;
 	}
-	.image:hover .plus{
-		opacity: 1;
-	}
-	.image:hover .caption{
-		opacity: 1;
-	}
-	footer a:hover{
-		border-bottom: solid 1px #333;
-	}
-	.intro a:hover{
-		border-bottom: solid 1px;
-	}
-	#lightbox-wrap{
-		cursor: url(../images/close.svg), zoom-out;
-	}
+
 }
 
 /* Clearfix */

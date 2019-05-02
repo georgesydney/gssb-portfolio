@@ -1,39 +1,53 @@
 $(document).ready(function(){
 
-	// $('#splash-name').delay(2000).fadeIn(500,"linear");
-	
-	// $('#dot-1').addClass("animated-dot");
-	// setTimeout(function(){
-	
-	// $('#dot-2').addClass("animated-dot");
-	// }, 1200);
-
-	// setTimeout(function(){
-	
-	// $('#dot-3').addClass("animated-dot");
-	// }, 500);
-
-	// setTimeout(function(){
-	
-	// $('#dot-4').addClass("animated-dot");
-	// }, 1700);
-
-	// setTimeout(function(){
-	
-	// $('#splash-name').addClass("animated-name");
-	// }, 2300);
-	
-	// $('#splash').delay(5000).fadeOut(500,"linear");
-
-
-	$('.image').on('click',function(){
-	  	$("#lightbox-wrap").fadeIn(300,function(){
-	 	});
+	$('.random').each(function(){
+        $(this).css({"left": Math.random() * window.outerWidth , "top": Math.random() * window.outerHeight});
 	});
 
-	$('#lightbox-wrap').on('click',function(){
-	  	$("#lightbox-wrap").fadeOut(300,function(){
-	 	});
-	});
+	$.fn.draggable = function(){
+		    var $this = this,
+		    ns = 'draggable_'+(Math.random()+'').replace('.',''),
+		    mm = 'mousemove.'+ns,
+		    mu = 'mouseup.'+ns,
+		    $w = $(window),
+		    isFixed = ($this.css('position') === 'fixed'),
+		    adjX = 0, adjY = 0;
+
+		    $this.mousedown(function(ev){
+		        var pos = $this.offset();
+		        if (isFixed) {
+		            adjX = $w.scrollLeft(); adjY = $w.scrollTop();
+		        }
+		        var ox = (ev.pageX - pos.left), oy = (ev.pageY - pos.top);
+		        $this.data(ns,{ x : ox, y: oy });
+		        $w.on(mm, function(ev){
+		            ev.preventDefault();
+		            ev.stopPropagation();
+		            if (isFixed) {
+		                adjX = $w.scrollLeft(); adjY = $w.scrollTop();
+		            }
+		            var offset = $this.data(ns);
+		            $this.css({left: ev.pageX - adjX - offset.x, top: ev.pageY - adjY - offset.y});
+		        });
+		        $w.on(mu, function(){
+		            $w.off(mm + ' ' + mu).removeData(ns);
+		        });
+		    });
+
+		    return this;
+		};
+
+		$('#benchmark').draggable();
+		$('#rida').draggable();
+		$('#benchmark-logo').draggable();
+		$('#flag').draggable();
+		$('#killington-fall').draggable();
+		$('#na-detail').draggable();
+		$('#curator-author').draggable();
+		$('#prescient').draggable();
+		$('#hole-and-corner').draggable();
+		$('#not-reading-but-dancing').draggable();
+
+
 
 });
