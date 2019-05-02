@@ -45,6 +45,10 @@ a{
 	text-decoration: none;
 	color: inherit;
 }
+a:hover{
+	color: #0000ff;
+	transition: 0.3s;
+}
 p{
 	font-family: 'sabon-regular', Helvetica, sans-serif;
 	font-size: 19px;
@@ -66,6 +70,10 @@ p a,b{
 	z-index: 20;
 }
 #images{
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
 	z-index: 10;
 }
 .random{
@@ -112,13 +120,6 @@ p a,b{
 	}
 	.l{
 		max-width: 200px;
-	}
-
-}
-@media (hover: hover) {
-	a:hover{
-		color: #0000ff;
-		transition: 0.3s;
 	}
 
 }

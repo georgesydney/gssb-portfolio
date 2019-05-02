@@ -1,8 +1,18 @@
 $(document).ready(function(){
 
-	$('.random').each(function(){
-        $(this).css({"left": Math.random() * window.outerWidth , "top": Math.random() * window.outerHeight});
+	// RANDOM POSITION 
+
+	for (var i = 0; i < 5; i++) {
+	  $('#images').append('<div class="random"></div>');
+	}
+	$( '.random' ).each(function( index ) {
+	  $(this).css({
+	    left : ((Math.random() * $('#images').width())),
+	    top : ((Math.random() * $('#images').height()))
+	  });
 	});
+
+	// DRAGGABLE 
 
 	// $.fn.draggable = function(){
 	// 	    var $this = this,
