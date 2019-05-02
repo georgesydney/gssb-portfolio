@@ -68,7 +68,6 @@ p a,b{
 #images{
 	z-index: 10;
 }
-
 .random{
 	position: fixed;
 	cursor: grab;
@@ -105,7 +104,15 @@ p a,b{
 
 
 @media screen and (max-width: 720px){
-
+	.s{
+	max-width: 120px;
+	}
+	.m{
+		max-width: 160px;
+	}
+	.l{
+		max-width: 200px;
+	}
 
 }
 @media (hover: hover) {
