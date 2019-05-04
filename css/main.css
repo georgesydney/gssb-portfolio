@@ -77,7 +77,7 @@ p a,b{
 	z-index: 10;
 }
 .random{
-	position: fixed;
+	position: absolute;
 	cursor: grab;
 }
 .s{
@@ -112,7 +112,7 @@ p a,b{
 
 
 @media screen and (max-width: 720px){
-/*	.s{
+	.s{
 	max-width: 120px;
 	}
 	.m{
@@ -120,11 +120,11 @@ p a,b{
 	}
 	.l{
 		max-width: 200px;
-	}*/
-	
-	#images{
-		display: none;
 	}
+
+/*	#images{
+		display: none;
+	}*/
 
 }
 
