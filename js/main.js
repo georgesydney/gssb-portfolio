@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	$('.random').each(function(){
-        $(this).css({"left": Math.random() * window.outerWidth , "top": Math.random() * window.outerHeight});
+        $(this).css({"left": Math.random() * window.innerWidth , "top": Math.random() * window.innerHeight});
 	});
 
 	$.fn.draggable = function(){
