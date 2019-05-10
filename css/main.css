@@ -81,13 +81,13 @@ p a,b{
 	cursor: grab;
 }
 .s{
-	max-width: 200px;
+	width: 200px;
 }
 .m{
-	max-width: 300px;
+	width: 300px;
 }
 .l{
-	max-width: 400px;
+	width: 400px;
 }
 #benchmark-logo{
 	width: 200px;
@@ -111,20 +111,28 @@ p a,b{
 
 
 
-@media screen and (max-width: 720px){
+@media screen and (min-width: 0px) and (max-width: 720px){
 	.s{
-	max-width: 120px;
+		width: 120px;
 	}
 	.m{
-		max-width: 160px;
+		width: 160px;
 	}
 	.l{
-		max-width: 200px;
+		width: 200px;
 	}
+}
 
-/*	#images{
-		display: none;
-	}*/
+@media screen and (min-width: 721px) and (max-width: 1440px){
+	.s{
+		width: 160px;
+	}
+	.m{
+		width: 240px;
+	}
+	.l{
+		width: 320px;
+	}
 
 }
 
