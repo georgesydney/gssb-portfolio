@@ -63,7 +63,7 @@ h1{
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 115%;
-	letter-spacing: 0.005em;
+	letter-spacing: 0.03em;
 	margin: 0;
 }
 h1 b{
@@ -100,18 +100,19 @@ h1 b{
 }
 
 .tile-wrap{
-	width: 100%;
-	height: 100vh;
-	position: absolute;
+	height: 16.667vw;
+	width: 16.667vw;
+	padding: 10px;
+	display: block;
+	float: left;
+
 }
 .tile{
-	height: 25vh;
-	width: 12.5vw;
+	height: 100%;
+	width: 100%;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
-	display: block;
-	float: left;
 	opacity: 0;
 	transition: 0.3s linear;
 }
@@ -124,8 +125,12 @@ h1 b{
 
 }
 
-@media screen and (min-width: 721px) and (max-width: 1440px){
+@media screen and (min-width: 1280px){
 
+/*	.tile{
+		height: 12.5vw;
+		width: 12.5vw;
+	}*/
 
 
 }
