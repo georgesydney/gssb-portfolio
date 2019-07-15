@@ -63,25 +63,27 @@ h1{
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 115%;
-	letter-spacing: 0.03em;
+	letter-spacing: 0.02em;
 	margin: 0;
 }
 h1 b{
 	font-size: 24px;
+	letter-spacing: 0.05em;
 }
 #info{
 	z-index: 1;
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -100%);
+	transform: translate(-50%, -50%);
 	width: 100%;
+	padding: 0 10px;
 	text-align: center;
 }
 
 #links{
 	position: fixed;
-	width: 50%;
+	width: 100%;
 	top: 15px;
 	right: 20px;
 	z-index: 100;
@@ -97,6 +99,12 @@ h1 b{
 	left: 20px;
 	z-index: 100;
 	width: 50%;
+}
+.tiles{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 
 .tile-wrap{
@@ -120,8 +128,27 @@ h1 b{
 	opacity: 1;
 }
 
+@media (any-hover: none) {
+
+	.tiles{
+		display: none;
+	}
+}
 
 @media screen and (min-width: 0px) and (max-width: 720px){
+
+	h1{
+	font-family: 'sabon-regular', Helvetica, sans-serif;
+	font-size: 21px;
+	font-weight: normal;
+	line-height: 115%;
+	letter-spacing: 0.02em;
+	margin: 0;
+	}
+	h1 b{
+		font-size: 16px;
+		letter-spacing: 0.05em;
+	}
 
 }
 
