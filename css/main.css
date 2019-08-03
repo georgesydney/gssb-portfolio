@@ -63,7 +63,6 @@ h1{
 	font-size: 30px;
 	font-weight: normal;
 	line-height: 115%;
-	letter-spacing: 0.02em;
 	margin: 0;
 }
 h1 b{
@@ -127,6 +126,9 @@ h1 b{
 .tile:hover{
 	opacity: 1;
 }
+.visible{
+	opacity: 1;
+}
 
 @media (any-hover: none) {
 
@@ -142,7 +144,6 @@ h1 b{
 	font-size: 21px;
 	font-weight: normal;
 	line-height: 115%;
-	letter-spacing: 0.02em;
 	margin: 0;
 	}
 	h1 b{
